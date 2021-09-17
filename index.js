@@ -59,14 +59,17 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(zooAnimals){
-    const displayNames =[];
-    let Museum = zooAnimals.forEach(function(item){
-      return item.animal_name, item.scientific_name;
+  function animalNames(zooAnimals) {
+    /*Your Code Here*/
+    const displayNames = [];
+    zooAnimals.forEach(function(item) {
+        // var temp = "name: " + item.animal_name + ", " + "scientific: " + item.scientific_name;
+        var temp = `name: ${item.animal_name}, scientific: ${item.scientific_name}`
 
-    });   
-    return displayNames;
-  }
+        displayNames.push(temp);
+    });
+    return(displayNames);
+}
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -75,11 +78,9 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(){
-    let LITTLEnames = zooAnimals.map(function(animal_name){
-      return animal_name.toLowerCase();
-    });
-    return LITTLEnames;
+  function lowerCaseNames(zooAnimals){
+    const lowCaseAnimalNames = zooAnimals.map(item => item.animal_name.toLowerCase());
+    return lowCaseAnimalNames;
   }
   
   
@@ -192,15 +193,20 @@ function CuboidMaker({length, width, height}){
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+// console.log('test3aa',cuboid.volume()); // 100
+// console.log('test3bb',cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+  constructor (length, width, height) {
+    this.length = length,
+    this.width = width,
+    this.height = height
+  }
 }
+
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
