@@ -59,8 +59,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(animal_name, scientific_name){
+    const displayNames =[];
+    zooAnimals.forEach(function(item){
+
+      displayNames.push(`name: ${animal_name}, scientific: ${scientific_name}`);
+    });
+    
+    return displayNames;
   }
   
 
@@ -70,8 +76,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(){
+    let LITTLEnames = zooAnimals.map(function(animal_name){
+      return animal_name.toLowerCase();
+    });
+    return LITTLEnames;
   }
   
   
@@ -80,8 +89,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(zooAnimals){
+    const atrisk = zooAnimals.filter(function(item){
+        return item.population < 5;
+    });
+    return atrisk;
   }
   
 
@@ -91,8 +103,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(zooAnimals){
+    let Totalpopulation = zooAnimals.reduce((acc, item) => {
+      return acc + item.population
+    }, 0);
+    return Totalpopulation;
   }
   
   
@@ -104,8 +119,8 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(){
+
   }
  
   
@@ -139,6 +154,7 @@ function greeting(/*Your Code Here */){
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
+
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
