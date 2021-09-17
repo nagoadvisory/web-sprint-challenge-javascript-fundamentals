@@ -1,7 +1,7 @@
 # Sprint Challenge - JavaScript Fundamentals
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
-THE
+
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in project. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied array methods, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a range of JavaScript problems.
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
@@ -25,14 +25,24 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+- the methods above are all array methods (meaning they do a function on arrays); .map is a way to manipulate the data in an array, without actually manipulating the original array, as .map automatically creates a new array. You could use .map if you took an array and needed to modify all the elements in the exact same way
+- .filter creates a new arrray by removing elements that do not belong / meet your criteria. Let's say you only want to filter for a certain year in a dataset (e.g., data must be after 1999)
+- .reduce takes all of the elements in an array and reduces them into a single value. .reduce is a good method to find the sum of a list of numbers in an array
 
 2. Explain the difference between a callback and a higher order function.
+- a higher order function is a function that takes another function as an arguement and returns a function to its callers; whereas, a callback function is a function that is passsed to another function with the expectation that the other function will call it
 
 3. Explain what a closure is.
+- closures happens when the function reaches back into its outer scope to grab something defined in the outer scope
 
 4. Describe the four principles of the 'this' keyword.
+- window binding: it happens when THIS is not given context; at that point, Javascript will return the window to us
+- Implicit Binding: this is the most common principle; it essentially says when the function is invokved, look to the left of the dot when the function is invoked
+- explicit binding: THIS in explicit binding is explicity passed into the argument. Within explicit binding, you have .call(), .apply(), and .bind()
+- new binding: used with constructor functions and says that when a function is invoked as a constructor function, using the 'new' keyword directs THIS to the newly created object
 
 5. Why do we need super() in an extended class?
+- Super() is called to avoid duplicating the constructor parts that are common between classes that have inheritance
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
